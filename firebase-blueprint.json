@@ -1,0 +1,29 @@
+{
+  "entities": {
+    "botState": {
+      "title": "Bot State",
+      "description": "The persistent state of the Telegram relayer bot.",
+      "type": "object",
+      "properties": {
+        "sessionString": { "type": "string", "description": "The Telegram MTProto session string." },
+        "currentApiId": { "type": "number", "description": "The Telegram API ID." },
+        "currentApiHash": { "type": "string", "description": "The Telegram API Hash." },
+        "userState": { "type": "object", "description": "The logged-in user state." },
+        "destinationConfig": { "type": "object", "description": "Configuration for the destination channel." },
+        "captionConfig": { "type": "object", "description": "Configuration for caption processing." },
+        "monitoredGroups": { "type": "array", "description": "List of groups being monitored." },
+        "relayedVideos": { "type": "array", "description": "Recent history of relayed videos." },
+        "processedDocIds": { "type": "array", "description": "Deduplication set for documents." },
+        "processedMessageKeys": { "type": "array", "description": "Deduplication set for messages." },
+        "processedGroupedKeys": { "type": "array", "description": "Deduplication set for grouped media." },
+        "updatedAt": { "type": "object", "description": "Timestamp of the last update." }
+      }
+    }
+  },
+  "firestore": {
+    "/settings/botState": {
+      "schema": "botState",
+      "description": "Stores the singleton bot state."
+    }
+  }
+}

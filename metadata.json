@@ -1,0 +1,8 @@
+{
+  "name": "TeleMax High-Speed Telegram Forwarder",
+  "description": "Automatically sync, clip, and repost Telegram group videos while cleaning titles and links for your target channels.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

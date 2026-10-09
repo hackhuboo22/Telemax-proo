@@ -1,0 +1,6 @@
+node_modules
+dist
+.git
+.env
+data/thumbnails
+data/teletrim_session.json
